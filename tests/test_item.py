@@ -43,3 +43,19 @@ def test_string_to_number():
     """Проверка возвращения числа из строки-числа"""
     assert Item.string_to_number("5") == 5
     assert Item.string_to_number("1.5") == 1
+
+
+def test__repr__():
+    """
+    Проверка магического метода repr
+    """
+    item1 = Item("Смартфон", 10000, 20)
+    assert Item.__repr__(item1) == "Item('Смартфон', 10000, 20)"
+
+
+def test__str__():
+    """
+    Проверка магического метода str
+    """
+    item1 = Item("Смартфон", 10000, 20)
+    assert Item.__str__(item1) == 'Смартфон'
