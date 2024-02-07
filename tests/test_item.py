@@ -2,7 +2,7 @@
 import pytest
 from src.item import Item
 from config import ITEMS
-
+from src.phone import Phone
 
 @pytest.fixture
 def item():
@@ -59,3 +59,10 @@ def test__str__():
     """
     item1 = Item("Смартфон", 10000, 20)
     assert Item.__str__(item1) == 'Смартфон'
+
+
+def test__add__():
+    phone1 = Phone("iPhone 14", 120000, 5, 2)
+    item2 = Item("Смартфон", 10000, 20)
+    assert Phone.__add__(item2, phone1) == 25
+
