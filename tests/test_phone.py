@@ -31,6 +31,6 @@ def test__repr__():
 def test__add__():
     phone1 = Phone("iPhone 14", 120000, 5, 2)
     item2 = Item("Смартфон", 10000, 20)
-    assert Phone.__add__(phone1, item2) == 25
-
+    assert item2 + phone1 == 25
+    assert phone1 + phone1 == 10
 
